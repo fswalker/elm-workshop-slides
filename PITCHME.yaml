@@ -1,0 +1,4 @@
+theme: white
+logo: assets/logo.svg
+highlight: solarized-light
+transition: slide
