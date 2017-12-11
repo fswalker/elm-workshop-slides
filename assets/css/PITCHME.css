@@ -1,3 +1,6 @@
 img.elm-logo-medium {
     max-width: 100px;
 }
+.list-no-point {
+    list-style-type: none;
+}

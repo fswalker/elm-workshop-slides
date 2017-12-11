@@ -13,23 +13,29 @@ by
 
 ## Agenda I
 
-1. 9:00 Welcome!
-1. 9:05 Elm intro
-1. 9:30 Ex1 - Basics
-1. 10:15 Ex2 - TDD
-1. 10:55 Ex3 - TEA time
-1. 12:00 LUNCH
+<ul class="list-no-point">
+<li>9:00  - Welcome!</li>
+<li>9:05  - Elm intro</li>
+<li>9:30  - Ex1 - Basics</li>
+<li>10:15 - Ex2 - TDD</li>
+<li>10:55 - Ex3 - TEA time</li>
+<li>12:00 - LUNCH</li>
+</ul>
 
 +++
 
 ## Agenda II
 
-1. 13:00 Ex4 - Forms
-1. 13:45 Ex5 - Events
-1. 14:45 Ex6 - Commands
-1. 15:45 Ex7, Ex8 - Decoders/Encoders
-1. 16:45 Ex9, Ex10 - Elm SPA
-1. BYE!
+<ul class="list-no-point">
+<li>13:00 - Ex4 - Forms</li>
+<li>13:45 - Ex5 - Events</li>
+<li>14:45 - Ex6 - Commands</li>
+<li>15:45 - Ex7 - Decoders</li>
+<li>16:15 - Ex8 - Encoders</li>
+<li>16:45 - Ex9 - HTTP Requests</li>
+<li>16:45 - Ex10 - Elm SPA</li>
+<li>BYE!</li>
+</ul>
 
 ---
 
