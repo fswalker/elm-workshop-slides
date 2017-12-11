@@ -1,5 +1,6 @@
-img.elm-logo-medium {
-    max-width: 100px;
+.reveal section img.elm-logo-end {
+    max-width: 200px;
+    border: none;
 }
 .list-no-point {
     list-style-type: none;
