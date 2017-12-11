@@ -1,4 +1,5 @@
-theme: white
-logo: assets/logo.svg
 highlight: solarized-light
+logo: assets/elm_logo.png
+theme: white
+theme-override : assets/css/PITCHME.css
 transition: slide
