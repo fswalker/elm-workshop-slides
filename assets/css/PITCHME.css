@@ -1,6 +1,7 @@
 .reveal section img.elm-logo-end {
     max-width: 200px;
-    border: none;
+    border: 0;
+    box-shadow: none;
 }
 .list-no-point {
     list-style-type: none;
