@@ -45,6 +45,16 @@ TODO
 
 ---
 
+## Exercises
+
+[https://github.com/dmaterowski/elm-workshop](https://github.com/dmaterowski/elm-workshop)
+
++++
+
+![Toy Story Rocket Gif](assets/toy_story_rocket_big.gif)
+
+---
+
 @title[The End]
 
 # Thank you! @fa[smile-o]
