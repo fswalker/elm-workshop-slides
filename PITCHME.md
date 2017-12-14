@@ -41,6 +41,6 @@ by
 
 @title[The End]
 
-# Thank you! :)
+# Thank you! @fa[smile-o]
 
 <img alt="Elm logo" src="assets/elm.png" class="elm-logo-end" />
