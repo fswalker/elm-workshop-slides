@@ -3,6 +3,6 @@
     border: 0;
     box-shadow: none;
 }
-.list-no-point {
+ul.list-no-point {
     list-style-type: none;
 }
