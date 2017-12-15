@@ -45,18 +45,101 @@ TODO
 
 ---
 
+## Elm Intro
+
+---
+
 ## Exercises
 
 [https://github.com/dmaterowski/elm-workshop](https://github.com/dmaterowski/elm-workshop)
 
 +++
 
+@title[Rocket]
+
 ![Toy Story Rocket Gif](assets/toy_story_rocket_big.gif)
+
+---
+
+## Elm Installation
+
+```
+                     npm install -g elm
+```
+
+---
+
+## Ex1 - Basics
+
++++
+
+@title[You and Elm]
+
+Only **You** and Elm
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 1]
+
+Round 1 
+
+**15 min**
+
++++
+
+@title[End Round 1]
+
+Time is up!
+
+---
+
+### Theory 1
+
++++
+
+#### Modules
+
+- help organize your code
+- name of the file should match <br> module name
+- **C**ase **S**ensitive!
+- use alias -- less typing
+- specific functions can be published (helps avoid namespace pollution)
+
++++
+
+#### Expressions
+
++++
+
+#### Immutability
+
+---
+
+### Part2 
+
+---
+
+### Theory 2
+
++++
+
+#### Partial Application
+
++++
+
+#### Currying
+
++++
+
+#### Unit
 
 ---
 
 @title[The End]
 
-# Thank you! @fa[smile-o]
+## Thank you! <i class="fa fa-smile-o" aria-hidden="true"> </i>
 
-<img alt="Elm logo" src="assets/elm.png" class="elm-logo-end" />
+<img alt="Elm logo" src="./assets/md/assets/elm.png" class="elm-logo-end" />
+
+[Elm Slack @fa[slack]](http://elmlang.herokuapp.com/)
