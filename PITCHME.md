@@ -103,36 +103,111 @@ Time is up!
 - help organize your code
 - name of the file should match <br> module name
 - **C**ase **S**ensitive!
-- use alias -- less typing
+- use `alias` - less typing
 - specific functions can be published (helps avoid namespace pollution)
 
 +++
 
 #### Expressions
 
+- always return values (**no** statements)
+- Elm has expressions **exclusively**
+- more readable code
+- no surprises! (especially in runtime)
+
 +++
 
 #### Immutability
 
----
+A value, once bound, cannot be changed! 
 
-### Part2 
-
----
-
-### Theory 2
+- It means a complete **lack** of **mutation**
+- More **robust** apps
+- Programs **easier** to **reason** about 
+- More **maintainable** codebase
+- No unexpected state mutations
 
 +++
 
 #### Partial Application
 
+
+We **apply** arguments to function.
+
+There can be **many** arguments.
+
+However, we do **not** need to apply all arguments at once!
+
++++
+
+@title[Partial Application Example]
+
+```elm
+add x y = x + y
+
+increment = add 1
+
+luckyNumber = increment 6
+```
+
+@[1](add function takes two arguments - x and y)
+@[3](partially apply `add` fn - give only one argument and obtain a new function called increment)
+@[5](supply the last argument and return result = 7)
+
 +++
 
 #### Currying
 
+Currying is a process which transforms a function with many arguments 
+
+to a chain of unary functions. 
+
+They accept only one input and return only one output.
+
++++
+
+#### All functions in Elm are <br> automatically curried
+
++++
+
+#### Currying explained
+
+```elm
+f : a -> b -> c -> d
+f x y z = ...
+
+f : a -> (b -> (c -> d))
+f = \x -> (\y -> (\z -> ...))
+```
+@[1-2](f accepts three arguments: x, y and z of types: a, b, and c. Returns value of type d)
+@[4-5](accept one argument and return one function until the last value is returned in the last application: ...)
+
 +++
 
 #### Unit
+
+Intutition: unit basically means _empty_, _void_ or _nothing_.
+
+This is both a **type** and a **value** the same time.
+
+In Elm unit is represented by `()` 
+
++++
+
+```elm
+f : () -> Int
+f () = 7
+
+f () -- returns 7
+
+g = \() -> 5
+g () -- returns 5
+```
+
+@[1,2](Function f takes unit and returns Int)
+@[4](Unit must be applied to function in order to return value)
+@[6](We can use lambda notation)
+@[7](We must pass unit! This is different than \_ -> notation)
 
 ---
 
