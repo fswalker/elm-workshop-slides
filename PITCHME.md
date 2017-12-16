@@ -208,7 +208,7 @@ g () -- returns 5
 @[1,2](Function f takes unit and returns Int)
 @[4](Unit must be applied to function in order to return value)
 @[6](We can use lambda notation)
-@[7](We must pass unit! This is different than \_ -> notation)
+@[7](We must pass unit! This is different than \\_ -> notation)
 
 ---
 
