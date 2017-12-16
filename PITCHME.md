@@ -166,8 +166,8 @@ They accept only one input and return only one output.
 
 +++
 
-#### All functions in Elm are 
-#### automatically curried
+### All functions in Elm are 
+### automatically curried
 
 +++
 
