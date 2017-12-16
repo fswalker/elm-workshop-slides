@@ -140,6 +140,6 @@ Time is up!
 
 ## Thank you! <i class="fa fa-smile-o" aria-hidden="true"> </i>
 
-<img alt="Elm logo" src="./assets/md/assets/elm.png" class="elm-logo-end" />
+<img alt="Elm logo" src="assets/elm.png" class="elm-logo-end" />
 
 [Elm Slack @fa[slack]](http://elmlang.herokuapp.com/)
