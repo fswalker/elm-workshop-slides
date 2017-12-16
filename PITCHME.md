@@ -110,8 +110,9 @@ Time is up!
 
 #### Expressions
 
-- always return values (**no** statements)
-- Elm has expressions **exclusively**
+- expression always evaluates to some **value**
+- Elm program consists of expressions **exclusively**
+- **no** statements!
 - more readable code
 - no surprises! (especially in runtime)
 
@@ -130,7 +131,6 @@ A value, once bound, cannot be changed!
 +++
 
 #### Partial Application
-
 
 We **apply** arguments to function.
 
@@ -166,7 +166,8 @@ They accept only one input and return only one output.
 
 +++
 
-#### All functions in Elm are <br> automatically curried
+#### All functions in Elm are 
+#### automatically curried
 
 +++
 
@@ -180,7 +181,7 @@ f : a -> (b -> (c -> d))
 f = \x -> (\y -> (\z -> ...))
 ```
 @[1-2](f accepts three arguments: x, y and z of types: a, b, and c. Returns value of type d)
-@[4-5](accept one argument and return one function until the last value is returned in the last application: ...)
+@[4-5](in fact f accepts one argument and returns one function until the last value is returned)
 
 +++
 
