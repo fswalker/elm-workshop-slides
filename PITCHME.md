@@ -310,7 +310,7 @@ type Maybe value
 ##### Union Types - summary
 
 * example of algebraic data structure
-* multiple cases for union type allowed
+* can have multiple cases
 * one case may wrap many data structures
 * Elm's *case* expression
 
