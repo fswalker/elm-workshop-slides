@@ -241,14 +241,14 @@ getName { name } = name
 
 ```elm
 bob =
-    { name = "Bob"
-    , age = 25
-    }
+   { name = "Bob"
+   , age = 25
+   }
 
 rex =
-    { name = "Rex" 
-    , legs = 4
-    }
+   { name = "Rex" 
+   , legs = 4
+   }
 
 getName bob == "Bob"
 
