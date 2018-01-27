@@ -266,7 +266,7 @@ getName rex == "Rex"
 
 > A union type is a custom type you create by specifying the values it can contain.
 
-<span class="aside">*Elm in Action*, Manning Publications by Richard Feldman</span>
+<span class="aside">Feldman, Richard *Elm in Action*. Manning Publications</span>
 
 +++
 
