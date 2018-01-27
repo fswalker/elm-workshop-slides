@@ -49,51 +49,6 @@ TODO
 
 ---
 
-## Exercises
-
-[https://github.com/dmaterowski/elm-workshop](https://github.com/dmaterowski/elm-workshop)
-
-+++
-
-@title[Rocket]
-
-![Toy Story Rocket Gif](assets/toy_story_rocket_big.gif)
-
----
-
-## Elm Installation
-
-```
-                     npm install -g elm
-```
-
----
-
-## Ex1 - Basics
-
-+++
-
-@title[You and Elm]
-
-Only **You** and Elm
-
-+++
-<!-- .slide: data-autoslide="900000" -->
-
-@title[Round 1]
-
-Round 1 
-
-**15 min**
-
-+++
-
-@title[End Round 1]
-
-Time is up!
-
----
-
 ### Theory 1
 
 +++
@@ -160,7 +115,7 @@ luckyNumber = increment 6
 
 Currying is a process which transforms a function with many arguments 
 
-to a chain of unary functions. 
+**to a chain of unary functions.**
 
 They accept only one input and return only one output.
 
@@ -187,11 +142,11 @@ f = \x -> (\y -> (\z -> ...))
 
 #### Unit
 
-Intutition: unit basically means _empty_, _void_ or _nothing_.
+Unit basically means _empty_, _void_ or _nothing_.
 
-This is both a **type** and a **value** the same time.
+**Type** unit has only one **value**.
 
-In Elm unit is represented by `()` 
+Both type and value are represented by empty tuple: **`()` **
 
 +++
 
@@ -209,6 +164,51 @@ g () -- returns 5
 @[4](Unit must be applied to function in order to return value)
 @[6](We can use lambda notation)
 @[7](We must pass unit! This is different than \\_ -> notation)
+
+---
+
+## Exercises
+
+[https://github.com/dmaterowski/elm-workshop](https://github.com/dmaterowski/elm-workshop)
+
++++
+
+@title[Rocket]
+
+![Toy Story Rocket Gif](assets/toy_story_rocket_big.gif)
+
+---
+
+## Elm Installation
+
+```
+                     npm install -g elm
+```
+
+---
+
+## Ex1 - Basics
+
++++
+
+@title[You and Elm]
+
+Only **You** and Elm
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 1]
+
+Round 1 
+
+**15 min**
+
++++
+
+@title[End Round 1]
+
+Time is up!
 
 ---
 
