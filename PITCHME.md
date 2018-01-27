@@ -181,7 +181,7 @@ g () -- returns 5
 
 ## Elm Installation
 
-```
+```shell
                      npm install -g elm
 ```
 
@@ -207,6 +207,128 @@ Round 1
 +++
 
 @title[End Round 1]
+
+Time is up!
+
+---
+
+### Theory 2
+
++++
+
+#### Records recap
+
+```elm
+type alias Person =
+    { name: String
+    , age: Int
+    }
+
+type alias Pet =
+    { name: String
+    , legs: Int
+    }
+
+getName { name } = name
+```
+
+@[1-4](Define type Person - alias for record with props: name and age)
+@[6-9](Define type Pet - alias for record with props: name and legs)
+@[11](Function which takes record with property name and ignores other props)
+
++++
+
+
+```elm
+bob =
+    { name = "Bob"
+    , age = 25
+    }
+
+rex =
+    { name = "Rex" 
+    , legs = 4
+    }
+
+getName bob == "Bob"
+
+getName rex == "Rex"
+```
+
+@[1-4](Define variable of type Person)
+@[6-9](Define variable of type Pet)
+@[11](Apply function getName to bob - return name)
+@[13](Apply function getName to rex - return name again)
+
++++
+
+#### Union Types
+
+> A union type is a custom type you create by specifying the values it can contain.
+
+<span class="aside">*Elm in Action*, Manning Publications by Richard Feldman</span>
+
++++
+
+##### Bool is a union type
+
+```elm
+type Bool = True | False
+```
+
++++
+
+##### Maybe is a union type
+
+```elm
+type Maybe value
+    = Just value
+    | Nothing
+```
+
+@[1](Declare type Maybe with type variable value)
+@[2](First possible value - `Just` as a container/wrapper for value)
+@[3](Second possible value - `Nothing` means no value)
+
++++
+
+##### Union Types - summary
+
+* union type is an example of an algebraic data structure
+* there can be defined many cases for union type
+* each case can have any number of other data structures
+* case expression is really helpful when working with union types
+
+---
+
+## Elm Test Installation
+
+```shell
+                     npm install -g elm-test
+```
+
+---
+
+## Ex2 - Union Types & TDD
+
++++
+
+@title[Ex2]
+
+Only **You** and Elm
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 2]
+
+Round 2
+
+**15 min**
+
++++
+
+@title[End Round 2]
 
 Time is up!
 

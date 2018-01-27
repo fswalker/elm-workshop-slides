@@ -6,3 +6,8 @@
 ul.list-no-point {
     list-style-type: none;
 }
+
+span.aside {
+    font-size: 0.7em;
+    font-style: italic;
+}
