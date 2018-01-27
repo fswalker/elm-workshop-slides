@@ -1,4 +1,4 @@
-highlight: solarized-light
+highlight: atom-one-dark
 logo: assets/elm_logo.png
 theme: white
 theme-override : assets/css/PITCHME.css
