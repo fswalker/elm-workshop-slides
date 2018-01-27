@@ -49,6 +49,12 @@ TODO
 
 ---
 
+### Slides
+
+[https://gitpitch.com/fswalker/elm-workshop-slides](https://gitpitch.com/fswalker/elm-workshop-slides) 
+
+---
+
 ### Theory 1
 
 +++
@@ -65,7 +71,7 @@ TODO
 
 #### Expressions
 
-- expression always evaluates to some **value**
+- always evaluate to some **value**
 - Elm program consists of expressions **exclusively**
 - **no** statements!
 - more readable code
@@ -77,21 +83,21 @@ TODO
 
 A value, once bound, cannot be changed! 
 
-- It means a complete **lack** of **mutation**
+- complete **lack** of **mutation**
 - More **robust** apps
 - Programs **easier** to **reason** about 
 - More **maintainable** codebase
-- No unexpected state mutations
+- No unexpected state modifications
 
 +++
 
 #### Partial Application
 
-We **apply** arguments to function.
+We **apply** a function to an argument.
 
 There can be **many** arguments.
 
-However, we do **not** need to apply all arguments at once!
+No need to apply to all arguments at once!
 
 +++
 
@@ -117,7 +123,7 @@ Currying is a process which transforms a function with many arguments
 
 **to a chain of unary functions.**
 
-They accept only one input and return only one output.
+They accept only **one input** and return only **one output**.
 
 +++
 
@@ -179,11 +185,20 @@ g () -- returns 5
 
 ---
 
-## Elm Installation
+### Elm Installation
 
 ```shell
                      npm install -g elm
 ```
+
+---
+
+### Elm Docs
+
+[http://package.elm-lang.org/packages/elm-lang/core/latest](http://package.elm-lang.org/packages/elm-lang/core/latest)
+<br>
+
+[http://elm-lang.org/docs/from-javascript](http://elm-lang.org/docs/from-javascript])
 
 ---
 
@@ -287,17 +302,17 @@ type Maybe value
 ```
 
 @[1](Declare type Maybe with type variable value)
-@[2](First possible value - `Just` as a container/wrapper for value)
-@[3](Second possible value - `Nothing` means no value)
+@[2](First option - `Just` as a container/wrapper for value)
+@[3](Second option - `Nothing` means: no value)
 
 +++
 
 ##### Union Types - summary
 
-* union type is an example of an algebraic data structure
-* there can be defined many cases for union type
-* each case can have any number of other data structures
-* case expression is really helpful when working with union types
+* example of algebraic data structure
+* multiple cases for union type allowed
+* one case may wrap many data structures
+* Elm's *case* expression
 
 ---
 
@@ -307,9 +322,15 @@ type Maybe value
                      npm install -g elm-test
 ```
 
+
 ---
 
 ## Ex2 - Union Types & TDD
+
+- Go to folder **Ex2**
+- Run `elm-test`
+- Exercise instructions: `Ex2/src/Ex2.elm`
+- Instructions for running tests in browser: `Ex2/tests/Tests.elm`
 
 +++
 
