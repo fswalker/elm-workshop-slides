@@ -355,6 +355,155 @@ Time is up!
 
 ---
 
+### Theory 3
+
++++
+
+#### The Elm Architecture
+
+1. **M**odel
+1. **U**pdate
+1. **V**iew
+
++++
+
+#### TEA Diagram
+
+<img alt="TEA Diagram" src="assets/tea1.png" class="tea1" />
+
++++
+
+#### `Html` Package
+
+Three the most important modules:
+
+- `Html` - main module, html elements
+- `Html.Attributes` - html attributes
+- `Html.Events` - event listeners
+
++++
+
+#### `Html.beginnerProgram`
+
+```elm
+main : Program Never model msg
+main =
+    Html.beginnerProgram
+        { model = initialModel
+        , view = view
+        , update = update
+        }
+```
+@[1](main - a program without flags, model and msg)
+@[2](main is an entry point of the elm web application)
+@[3](function which initializes a web application)
+@[4](model : model)
+@[5](view : model -> Html msg)
+@[6](update : msg -> model -> model)
+
++++
+
+#### `Html` syntax recap
+
+```html
+<div class="content">
+  <h1 class="title">Hello World</h1>
+  <p>Lorem ipsum<sup>[1]</sup> dolor sit amet...</p>
+</div>
+```
+
++++
+
+#### `Html` Module
+
+```elm
+text : String -> Html msg
+
+h1 : List (Attribute msg) -> List (Html msg) -> Html msg
+```
+@[1](fn text takes string and returns it as an html node)
+@[3](fn h1 takes attributes, children nodes and returns html node)
+
++++
+
+#### `Html` Sample
+
+```elm
+main : Html msg
+main =
+    h1 [] [ text "Hello, World!" ]
+```
+@[1](main is of type Html with any message)
+@[3](h1 element takes)
+
++++
+
+#### `Html.Attributes` Sample
+
+```elm
+class : String -> Attribute msg
+
+h1 : List (Attribute msg) -> List (Html msg) -> Html msg
+
+main : Html msg
+main =
+    h1 [ class "title" ] [ text "Hello, World!" ]
+```
+@[1](takes class name argument, returns Attribute type)
+@[3](h1 fn takes list of Attribute elements)
+@[5-7](usage of class attribute fn)
+
++++
+
+#### `Html.Events` Sample
+
+```elm
+onClick : msg -> Attribute msg
+
+h1 : List (Attribute msg) -> List (Html msg) -> Html msg
+
+main : Html msg
+main =
+    h1 
+        [ class "title" 
+        , onClick "Greetings!"
+        ] 
+        [ text "Hello, World!" ]
+
+h1 : List (Attribute String) -> List (Html String) -> Html String
+```
+@[1](takes whatever message, returns Attribute type with that msg)
+@[3](h1 fn takes list of Attribute elements)
+@[9](onClick creates event listener which emits text)
+@[13](msg type variable is now a concrete type String)
+
++++
+
+@title[Ex3]
+
+Only **You** and Elm
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 3]
+
+Round 3
+
+**15 min**
+
++++
+
+@title[End Round 3]
+
+Time is up!
+
+---
+
+### Theory 4
+
+---
+
 @title[The End]
 
 ## Thank you! <i class="fa fa-smile-o" aria-hidden="true"> </i>

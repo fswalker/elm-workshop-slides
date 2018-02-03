@@ -3,6 +3,13 @@
     border: 0;
     box-shadow: none;
 }
+
+.reveal section img.tea1 {
+    max-width: 700px;
+    border: 0;
+    box-shadow: none;
+}
+
 ul.list-no-point {
     list-style-type: none;
 }
