@@ -102,6 +102,7 @@ No need to apply to all arguments at once!
 +++
 
 @title[Partial Application Example]
+#### Partial Application Sample
 
 ```elm
 add x y = x + y
@@ -111,8 +112,8 @@ increment = add 1
 luckyNumber = increment 6
 ```
 
-@[1](add function takes two arguments - x and y)
-@[3](partially apply `add` fn - give only one argument and obtain a new function called increment)
+@[1]('add' function takes two arguments - x and y)
+@[3](partially apply 'add' fn - give only one argument and obtain a new function called 'increment')
 @[5](supply the last argument and return result = 7)
 
 +++
@@ -150,11 +151,15 @@ f = \x -> (\y -> (\z -> ...))
 
 Unit basically means _empty_, _void_ or _nothing_.
 
-**Type** unit has only one **value**.
+**Type** _unit_ has only one **value**.
 
-Both type and value are represented by empty tuple: **`()` **
+Both type and value are 
+<br>
+represented by an empty tuple: **`()`**
 
 +++
+
+#### Unit Example
 
 ```elm
 f : () -> Int
@@ -198,7 +203,7 @@ g () -- returns 5
 [http://package.elm-lang.org/packages/elm-lang/core/latest](http://package.elm-lang.org/packages/elm-lang/core/latest)
 <br>
 
-[http://elm-lang.org/docs/from-javascript](http://elm-lang.org/docs/from-javascript])
+[http://elm-lang.org/docs/from-javascript](http://elm-lang.org/docs/from-javascript)
 
 ---
 
@@ -231,7 +236,7 @@ Time is up!
 
 +++
 
-#### Records recap
+#### Records Recap 1
 
 ```elm
 type alias Person =
@@ -253,7 +258,7 @@ getName { name } = name
 
 +++
 
-
+#### Records Recap 2
 ```elm
 bob =
    { name = "Bob"
@@ -265,9 +270,9 @@ rex =
    , legs = 4
    }
 
-getName bob == "Bob"
+getName bob -- returns "Bob"
 
-getName rex == "Rex"
+getName rex -- returns "Rex"
 ```
 
 @[1-4](Define variable of type Person)
@@ -330,7 +335,7 @@ type Maybe value
 - Go to folder **Ex2**
 - Run `elm-test`
 - Exercise instructions: `Ex2/src/Ex2.elm`
-- Instructions for running tests in browser: `Ex2/tests/Tests.elm`
+- Instructions for running tests in a browser: `Ex2/tests/Tests.elm`
 
 +++
 
