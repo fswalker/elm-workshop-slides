@@ -172,7 +172,7 @@ g () -- returns 5
 ```
 
 @[1,2](Function f takes unit and returns Int)
-@[4](Unit must be applied to function in order to return value)
+@[4](Unit must be passed to fn in order to obtain a result)
 @[6](We can use lambda notation)
 @[7](We must pass unit! This is different than \\_ -> notation)
 
@@ -286,7 +286,7 @@ getName rex -- returns "Rex"
 
 > A union type is a custom type you create by specifying the values it can contain.
 
-<span class="aside">Feldman, Richard *Elm in Action*. Manning Publications</span>
+<span class="aside">Feldman, R. *Elm in Action*. Manning Publications</span>
 
 +++
 
@@ -338,12 +338,6 @@ type Maybe value
 - Instructions for running tests in a browser: `Ex2/tests/Tests.elm`
 
 +++
-
-@title[Ex2]
-
-Only **You** and Elm
-
-+++
 <!-- .slide: data-autoslide="900000" -->
 
 @title[Round 2]
@@ -382,9 +376,9 @@ Time is up!
 
 Three the most important modules:
 
-- `Html` - main module, html elements
-- `Html.Attributes` - html attributes
-- `Html.Events` - event listeners
+- `Html`
+- `Html.Attributes`
+- `Html.Events`
 
 +++
 
@@ -399,8 +393,8 @@ main =
         , update = update
         }
 ```
-@[1](main - a program without flags, model and msg)
-@[2](main is an entry point of the elm web application)
+@[1](main - a program without flags, with model and msg)
+@[2](main is an entry point of an elm web application)
 @[3](function which initializes a web application)
 @[4](model : model)
 @[5](view : model -> Html msg)
@@ -439,7 +433,7 @@ main =
     h1 [] [ text "Hello, World!" ]
 ```
 @[1](main is of type Html with any message)
-@[3](h1 element takes)
+@[3](h1 element takes empty attributes list and list with text node child)
 
 +++
 
@@ -478,15 +472,9 @@ main =
 h1 : List (Attribute String) -> List (Html String) -> Html String
 ```
 @[1](takes whatever message, returns Attribute type with that msg)
-@[3](h1 fn takes list of Attribute elements)
+@[3,7-10](h1 fn takes list of Attribute elements)
 @[9](onClick creates event listener which emits text)
-@[13](msg type variable is now a concrete type String)
-
-+++
-
-@title[Ex3]
-
-Only **You** and Elm
+@[3,13](msg type variable is now a concrete type String)
 
 +++
 <!-- .slide: data-autoslide="900000" -->
