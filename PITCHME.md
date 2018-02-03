@@ -503,6 +503,62 @@ Time is up!
 
 ### Theory 4
 
++++
+
+#### Extensible Records
+
+> Types that have at least certain fields, but may have others as well. 
+
+[http://elm-lang.org/docs/records](http://elm-lang.org/docs/records)
+
++++
+
+#### Extensible Records Sample
+
+```elm
+type alias Positioned a =
+    { a | x : Float, y : Float }
+
+type alias Person = { name: String }
+
+alice : Positioned Person
+alice = 
+    { x = 1.0
+    , y = 3.0
+    , name = "Alice"
+    }
+
+getPos : Positioned a -> (Float,Float)
+getPos {x,y} =
+  (x,y)
+
+getPos alice -- returns (1.0, 3.0)
+```
+@[1-2](extensible record definition)
+@[4](helper record for the example)
+@[6-11](definition of positioned record)
+@[13-15](fn accepts position record)
+@[17](getPos works for Positioned Person)
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 4]
+
+Round 4
+
+**15 min**
+
++++
+
+@title[End Round 4]
+
+Time is up!
+
+---
+
+### Theory 5
+
 ---
 
 @title[The End]
