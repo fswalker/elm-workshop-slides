@@ -472,9 +472,17 @@ main =
 h1 : List (Attribute String) -> List (Html String) -> Html String
 ```
 @[1](takes whatever message, returns Attribute type with that msg)
-@[3,7-10](h1 fn takes list of Attribute elements)
+@[3,7-10](h1 fn takes a list of Attribute elements)
 @[9](onClick creates event listener which emits text)
 @[3,13](msg type variable is now a concrete type String)
+
++++
+
+#### Html2Elm
+
+Translates your html to elm syntax automatically:
+
+[https://mbylstra.github.io/html-to-elm/](https://mbylstra.github.io/html-to-elm/)
 
 +++
 <!-- .slide: data-autoslide="900000" -->
