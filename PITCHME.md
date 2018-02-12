@@ -120,11 +120,11 @@ luckyNumber = increment 6
 
 #### Currying
 
-Currying is a process which transforms a function with many arguments 
+A concept which represents transformation of a function with many arguments 
 
-**to a chain of unary functions.**
+**to a chain of unary functions,**
 
-They accept only **one input** and return only **one output**.
+which accept only **one input** and return only **one&nbsp;output**.
 
 +++
 
@@ -449,7 +449,7 @@ main =
     h1 [ class "title" ] [ text "Hello, World!" ]
 ```
 @[1](takes class name argument, returns Attribute type)
-@[3](h1 fn takes list of Attribute elements)
+@[3](h1 fn takes a list of Attributes)
 @[5-7](usage of class attribute fn)
 
 +++
@@ -558,6 +558,8 @@ Time is up!
 ---
 
 ### Theory 5
+
++++
 
 ---
 
