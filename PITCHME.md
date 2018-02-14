@@ -594,15 +594,96 @@ main =
 @[8](view accepts model and returns Html msg)
 
 
-+++?code=src/Commands1.elm&lang=elm
++++
 
-#### `Html.program` - template
+#### `Html.program` - display date
 
+```elm
+type alias Model = Date
 
-+++?code=src/Commands2.elm&lang=elm
+main =
+    Html.program
+        { init = ( Date.fromTime 0, Cmd.none )
+        ...
+```
+@[1](Model is just a Date type)
+@[5](init with Unix epoch start date and no command)
 
-#### Commands - usage
++++
 
+#### `Html.program` - display current date
+
+```elm
+type Msg = UpdateDate Date
+
+-- Date.now : Task x Date
+-- Task.perform : (a -> msg) -> Task Never a -> Cmd msg
+-- Our Task.perform : (Date -> Msg) -> Task Never Date -> Cmd Msg
+
+main =
+    Html.program
+        { init = 
+            ( Date.fromTime 0
+            , Task.perform UpdateDate Date.now
+            )
+        ...
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update (UpdateDate d) model =
+    ( d, Cmd.none )
+```
+@[1](Add Msg which contains new Date)
+@[3](Date.now returns Task which returns current Date)
+@[4](Task.perform accepts fn, Task, and returns Cmd)
+@[5](Our fn is UpdateDate)
+@[11](Cmd is a second element in the init pair)
+@[15-17](update fn returns new model and no Cmd)
+
++++
+
+#### `Html.program` - display date on action
+
+```elm
+type Msg 
+    = UpdateDate Date
+    | GetDate
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        UpdateDate d -> ( d, Cmd.none )
+        GetDate -> ( model, Task.perform UpdateDate Date.now )
+
+view : Model -> Html Msg
+view model =
+    div [] 
+        [ button [ onClick GetDate ] [ text "Get Date" ]
+        , text <| toString model
+        ]
+
+```
+@[3](Add a Msg case which is used to ask for a date)
+@[5-9](GetDate comes from Elm runtime - perform task, Cmd is created)
+@[11-16](For instance, GetDate is emitted on button click)
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 6]
+
+Round 6
+
+**15 min**
+
++++
+
+@title[End Round 6]
+
+Time is up!
+
+---
+
+### Theory 7
 
 ---
 
