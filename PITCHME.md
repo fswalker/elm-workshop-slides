@@ -368,7 +368,7 @@ Time is up!
 
 #### TEA Diagram
 
-<img alt="TEA Diagram" src="assets/tea1.png" class="tea1" />
+<img alt="TEA Diagram" src="assets/tea1.png" class="tea" />
 
 +++
 
@@ -559,7 +559,50 @@ Time is up!
 
 ### Theory 5
 
+---
+
+### Theory 6
+
 +++
+
+#### The Elm Architecture - Commands
+
+<img alt="TEA Diagram - Commands" src="assets/tea2.png" class="tea" />
+
++++
+
+#### `Html.program`
+
+```elm
+main : Program Never model msg
+main =
+    Html.program
+        :
+        { init : (model, Cmd msg)
+        , update : msg -> model -> (model, Cmd msg)
+        , subscriptions : model -> Sub msg
+        , view : model -> Html msg 
+        }
+        -> Program Never model msg
+```
+@[1](main - a program without flags, with model and msg)
+@[2](main is an entry point of an elm web application)
+@[3](function which initializes a web application)
+@[5](init is a pair of model and command)
+@[6](update fn takes message, model and returns new model with command)
+@[7](subscriptions is a fn which takes model and returns subscriptions)
+@[8](view accepts model and returns Html msg)
+
+
++++?code=src/Commands1.elm&lang=elm
+
+#### `Html.program` - template
+
+
++++?code=src/Commands2.elm&lang=elm
+
+#### Commands - usage
+
 
 ---
 
