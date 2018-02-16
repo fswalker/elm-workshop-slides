@@ -685,6 +685,97 @@ Time is up!
 
 ### Theory 7
 
++++
+
+#### Json Decoders
+
+> You use the Json.Decode library to convert wild and crazy JSON into nicely structured Elm values.
+
+<span class="aside">Elm Guide</span>
+
++++
+
+#### Basic decoder
+
+```elm
+string : Decoder String
+
+decodeString : Decoder a -> String -> Result String a
+
+decodeString int "42"
+-- Ok 42 : Result String Int
+
+decodeString int "true"
+Err "Expecting an Int but instead got: true" : Result String Int
+```
+@[1](Primitive decoder which returns Elm String type)
+@[3](fn which takes decoder, input string and tries to decode it)
+@[5-6](decode input string using int decoder - it is ok!)
+@[8-9](true is not an Int!)
+
++++
+
+#### List decoder
+
+```elm
+list : Decoder a -> Decoder (List a)
+
+decodeString (list int) "[1,2,3]"
+-- Ok [1,2,3] : Result String (List Int)
+```
+@[1](list fn takes decoder and returns another decoder for list of values of the first decoder)
+@[3-4](list int decodes the list of integers)
+
++++
+
+#### Object decoder
+
+```elm
+field : String -> Decoder a -> Decoder a
+
+decodeString (field "x" int) """{ "x": 3, "y": 4 }"""
+-- Ok 3 : Result String Int
+```
+@[1](field fn takes field name decoder for field value and returns new decoder)
+@[3-4](decode string which should contain object with field x of type int)
+
++++
+
+#### Decode to records
+
+```elm
+map2 
+    : (a -> b -> value) 
+    -> Decoder a 
+    -> Decoder b 
+    -> Decoder value
+
+type alias Point = { x : Int, y : Int }
+
+pointDecoder : Decoder Point
+pointDecoder = map2 Point (field "x" int) (field "y" int)
+
+decodeString pointDecoder """{ "x": 3, "y": 4 }"""
+Ok { x = 3, y = 4 } : Result String Point
+```
+@[1-2](map2 takes fn which takes two arguments and returns a value)
+@[3-4](then it takes two decoders)
+@[5](then it returns new decoder which decodes a value)
+@[7](Point is a fn which takes two Int arguments)
+@[9-10](both decoders are field decoders of type int)
+@[12-13](JSON with object can be decoded)
+
++++
+
+#### Advanced decoders
+
+Special library for more advanced decoding scenarios:
+[elm-decode-pipeline](http://package.elm-lang.org/packages/NoRedInk/elm-decode-pipeline/latest)
+
+- more than 8 fields at once
+- optional, required fields
+- nice pipeline workflow style
+
 ---
 
 @title[The End]
