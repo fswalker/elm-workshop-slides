@@ -710,14 +710,14 @@ type Result error value
 #### Basic decoder
 
 ```elm
-string : Decoder String
+Json.Decode.string : Decoder String
 
-decodeString : Decoder a -> String -> Result String a
+Json.Decode.decodeString : Decoder a -> String -> Result String a
 
-decodeString int "42"
+Json.Decode.decodeString int "42"
 -- Ok 42 : Result String Int
 
-decodeString int "true"
+Json.Decode.decodeString int "true"
 Err "Expecting an Int but instead got: true" : Result String Int
 ```
 @[1](Primitive decoder which returns Elm String type)
@@ -787,6 +787,78 @@ Special library for more advanced decoding scenarios:
 - more than 8 fields at once
 - optional, required fields
 - nice pipeline workflow style
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 7]
+
+Round 7
+
+**15 min**
+
++++
+
+@title[End Round 7]
+
+Time is up!
+
+---
+
+### Theory 8
+
++++
+
+#### Json Encoders
+
+Allow you to transform Elm values into JSON values
+
++++
+
+#### Encode primitive values
+
+```elm
+Json.Encode.encode : Int -> Value -> String
+
+Json.Encode.string : String -> Value
+
+encode 0 (int 5)
+-- "5"
+```
+@[1](encode value into JSON string with given identation level)
+@[3](fn which returns Json Value from String)
+@[5-6](we encoded Elm's Integer value as JSON string)
+
++++
+
+#### Encode objects
+
+```elm
+object : List (String, Value) -> Value
+
+obj = object [ ("x", int 1), ("y", int 3) ]
+
+encode 0 obj
+-- "{\"x\":1,\"y\":3}" : String
+```
+@[1](object takes list of pairs: property name and encoded Value)
+@[3](create encoded object)
+@[5-6](get JSON string for encoded object)
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 8]
+
+Round 8
+
+**15 min**
+
++++
+
+@title[End Round 8]
+
+Time is up!
 
 ---
 
