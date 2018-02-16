@@ -687,6 +687,18 @@ Time is up!
 
 +++
 
+#### Result
+
+```elm
+type Result error value
+    = Ok value
+    | Err error
+```
+@[1-2](A Result is either Ok meaning the computation succeeded)
+@[3](or it is an Err meaning that there was some failure)
+
++++
+
 #### Json Decoders
 
 > You use the Json.Decode library to convert wild and crazy JSON into nicely structured Elm values.
