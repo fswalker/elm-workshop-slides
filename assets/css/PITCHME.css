@@ -18,3 +18,7 @@ span.aside {
     font-size: 0.7em;
     font-style: italic;
 }
+
+.reveal section:last-child.present a:first-child {
+    padding-right: 1em;
+}

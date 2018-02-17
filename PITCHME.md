@@ -946,4 +946,5 @@ Time is up!
 
 <img alt="Elm logo" src="assets/elm.png" class="elm-logo-end" />
 
-[Elm Slack @fa[slack]](http://elmlang.herokuapp.com/)
+[Elm Slack @fa[slack]](http://elmlang.herokuapp.com)
+[Elm Discourse @fa[commenting]](https://discourse.elm-lang.org)
