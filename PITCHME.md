@@ -862,6 +862,71 @@ Time is up!
 
 ---
 
+### Theory 9
+
++++
+
+#### Http calls
+
++++
+
+#### Fetch string value
+
+```elm
+getString : String -> Request String
+
+send 
+    : (Result Error a -> msg) 
+    -> Request a 
+    -> Cmd msg
+
+type Msg = UpdateLicense (Result Http.Error String)
+
+command =
+    Http.getString "https://api.github.com/licenses/mit"
+    |> Http.send UpdateLicense
+```
+@[1](getString takes url and returns request of type String)
+@[3-4](send takes fn which transforms Result into msg)
+@[5](then it takes Request)
+@[6](finally returns Cmd which will trigger msg at some point)
+@[8](Our msg takes/wraps Result)
+@[10-11](We obtain Cmd by passing getString result \(Request\))
+@[12](into partially applied Http.send with first arg being data constructor)
+
++++
+
+#### Fetch more complex types
+
+```elm
+get : String -> Decoder a -> Request a
+
+send : (Result Error a -> msg) -> Request a -> Cmd msg
+
+type alias License = { name: String }
+type Msg = UpdateLicense (Result Http.Error License)
+
+licenseDecoder : Decoder License
+licenseDecoder = 
+    Decode.field "name" Decode.string
+    |> Decode.map License
+
+command =
+    Http.get "https://api.github.com/licenses/mit" licenseDecoder
+    |> Http.send UpdateLicense
+```
+@[1](get takes url, decoder of type a and returns request of type a)
+@[3](send is the same)
+@[5](Simple record for License with name property)
+@[6](The same Msg - String is replaced with License type)
+@[8-9](Create Decoder of type License)
+@[10](Decode field name as string)
+@[11](Create Msg type with UpdateLicense data constructor from the name string)
+@[14](Create Request of type License thanks to typed Decoder)
+@[15](Create Command as previously - Elm runtime will take care of http request)
+
+---
+
 @title[The End]
 
 ## Thank you! <i class="fa fa-smile-o" aria-hidden="true"> </i>
