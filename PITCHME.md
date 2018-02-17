@@ -864,8 +864,6 @@ Time is up!
 
 ### Theory 9
 
-+++
-
 #### Http calls
 
 +++
@@ -889,10 +887,10 @@ command =
 @[1](getString takes url and returns request of type String)
 @[3-4](send takes fn which transforms Result into msg)
 @[5](then it takes Request)
-@[6](finally returns Cmd which will trigger msg at some point)
-@[8](Our msg takes/wraps Result)
-@[10-11](We obtain Cmd by passing getString result \(Request\))
-@[12](into partially applied Http.send with first arg being data constructor)
+@[6](finally returns Cmd which will emit msg at some point)
+@[8](Our msg takes/wraps the Result)
+@[11](Apply getString to url and obtain a \(Request\))
+@[10,12](send fn is applied to data constructor UpdateLicenses and previously created Request, Cmd is returned)
 
 +++
 
@@ -915,15 +913,30 @@ command =
     Http.get "https://api.github.com/licenses/mit" licenseDecoder
     |> Http.send UpdateLicense
 ```
-@[1](get takes url, decoder of type a and returns request of type a)
-@[3](send is the same)
-@[5](Simple record for License with name property)
+@[1](get fn takes url, decoder of type a and returns request of type a)
+@[3](send is the same fn as previously)
+@[5](Simple record representing License with one property: name)
 @[6](The same Msg - String is replaced with License type)
 @[8-9](Create Decoder of type License)
 @[10](Decode field name as string)
-@[11](Create Msg type with UpdateLicense data constructor from the name string)
+@[11](Create record type using data constructor License)
 @[14](Create Request of type License thanks to typed Decoder)
-@[15](Create Command as previously - Elm runtime will take care of http request)
+@[15](Create Cmd as previously - Elm runtime will take care of triggering http request)
+
++++
+<!-- .slide: data-autoslide="900000" -->
+
+@title[Round 9]
+
+Round 9
+
+**15 min**
+
++++
+
+@title[End Round 9]
+
+Time is up!
 
 ---
 
