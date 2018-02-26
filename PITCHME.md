@@ -949,3 +949,11 @@ Time is up!
 
 [Elm Slack @fa[slack]](http://elmlang.herokuapp.com)
 [Elm Discourse @fa[commenting]](https://discourse.elm-lang.org)
+
+---
+
+### Short Survey
+[https://mike1752.typeform.com/to/WrUCxU](https://mike1752.typeform.com/to/WrUCxU)
+<br>
+<br>
+Thanks for your feedback! <i class="fa fa-heart" aria-hidden="true"> </i>
