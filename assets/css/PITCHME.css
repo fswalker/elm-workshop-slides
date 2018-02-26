@@ -1,13 +1,18 @@
-.reveal section img.elm-logo-end {
-    max-width: 200px;
+.reveal section img {
     border: 0;
     box-shadow: none;
 }
 
+.reveal section img.elm-logo-end {
+    max-width: 200px;
+}
+
+.reveal section img.sponsor {
+    max-width: 75%;
+}
+
 .reveal section img.tea {
     max-width: 700px;
-    border: 0;
-    box-shadow: none;
 }
 
 ul.list-no-point {
