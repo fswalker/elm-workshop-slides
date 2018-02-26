@@ -13,7 +13,7 @@ by
 
 ## Sponsor
 
-TODO
+<img alt="Sponsor logo - Relativity" src="assets/relativity-logo.png" class="sponsor" />
 
 ---
 
@@ -36,6 +36,7 @@ TODO
 <li>13:00 - Ex4 - Forms</li>
 <li>13:45 - Ex5 - Events</li>
 <li>14:45 - Ex6 - Commands</li>
+<li>Quiz</li>
 <li>15:45 - Ex7 - Decoders</li>
 <li>16:15 - Ex8 - Encoders</li>
 <li>16:45 - Ex9 - HTTP Requests</li>
