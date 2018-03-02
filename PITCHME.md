@@ -52,7 +52,7 @@ by
 
 ### Slides
 
-[https://gitpitch.com/fswalker/elm-workshop-slides](https://gitpitch.com/fswalker/elm-workshop-slides) 
+[https://gitpitch.com/fswalker/elm-workshop-slides/relativity](https://gitpitch.com/fswalker/elm-workshop-slides/relativity)
 
 ---
 
